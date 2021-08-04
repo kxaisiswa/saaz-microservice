@@ -31,7 +31,7 @@ let mail_sender = nodemailer.createTransport({
   }
 });
 
-app.get('/display_value', (req, res) => {
+app.get('/', (req, res) => {
   console.log("Functioning!");
 });
 
