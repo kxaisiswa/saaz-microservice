@@ -78,7 +78,7 @@ app.post('/send_email', function (req, res) {
     from: "saaz@noreply.com",
     to: node_studemail,
     subject: "SAAZ STUDENT MANAGEMENT SYSTEM LOGIN INFORMATION",
-    text: "<div>Student ID: " + node_studid + "</div><div>Student Password: " + node_studpass + "</div><div>Student Name: " + node_studname + "</div>"
+    html: "<div>Student ID: " + node_studid + "</div><div>Student Password: " + node_studpass + "</div><div>Student Name: " + node_studname + "</div>"
   };
 
   mail_sender.sendMail(mail_content, function(err, res) {
