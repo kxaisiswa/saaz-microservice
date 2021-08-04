@@ -10,15 +10,15 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
 var database_connection = mysql.createPool({
-  // host: "us-cdbr-east-04.cleardb.com",
-  // user: "b1abf5379fdd30",
-  // password: "4d65d9bc",
-  // database: "heroku_13ed534030c3d23"
+  host: "us-cdbr-east-04.cleardb.com",
+  user: "b1abf5379fdd30",
+  password: "4d65d9bc",
+  database: "heroku_13ed534030c3d23"
 
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "saaz"
+  // host: "localhost",
+  // user: "root",
+  // password: "",
+  // database: "saaz"
 });
 
 let mail_sender = nodemailer.createTransport({
