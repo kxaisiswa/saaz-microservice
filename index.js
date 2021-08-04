@@ -32,6 +32,10 @@ let mail_sender = nodemailer.createTransport({
 });
 
 app.get('/display_value', (req, res) => {
+  console.log("Functioning!");
+});
+
+app.get('/display_value', (req, res) => {
   var node_studid = req.query.studid;
 
   database_connection.getConnection(function (err, connection) {
