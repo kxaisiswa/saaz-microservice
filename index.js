@@ -78,7 +78,7 @@ app.post('/send_email', function (req, res) {
     from: "saaz@noreply.com",
     to: node_studemail,
     subject: "SAAZ STUDENT MANAGEMENT SYSTEM LOGIN INFORMATION",
-    html: "<div>Student ID: " + node_studid + "</div><div>Student Password: " + node_studpass + "</div><div>Student Name: " + node_studname + "</div>"
+    html: "<p>Dear " + node_studname + "</p>" + "<p>Here is your account information for you to access SAAZ Student Management System.</p>" + "<div><b>Student ID: </b>" + node_studid + "</div>" + "<div><b>Password: </b>" + node_studpass + "</div>" + "<p><div>You can access the system through this link.</div><div><a href='https://saaz-student-management-system.herokuapp.com/'>https://saaz-student-management-system.herokuapp.com/</a></div></p>"
   };
 
   mail_sender.sendMail(mail_content, function(err, res) {
